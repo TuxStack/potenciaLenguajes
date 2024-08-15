@@ -21,7 +21,6 @@ public class VentanaPrincipal extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // Título superior
         JPanel panelTitulo = new JPanel();
         panelTitulo.setLayout(new BorderLayout());
         JLabel etiquetaTitulo = new JLabel("<html><div style='text-align: center;'>José Enrique González Sánchez<br/>Teoría de autómatas</div></html>", JLabel.CENTER);
@@ -29,12 +28,10 @@ public class VentanaPrincipal extends JFrame {
         panelTitulo.add(etiquetaTitulo, BorderLayout.CENTER);
         add(panelTitulo, BorderLayout.NORTH);
 
-        // Creación de botones
         JButton botonCalcular = new JButton("Calcular");
         JButton botonLimpiar = new JButton("Limpiar");
         JButton botonInstrucciones = new JButton("Instrucciones"); 
 
-        // Panel de botones
         JPanel panelBotones = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 0));
         panelBotones.setBorder(BorderFactory.createEmptyBorder(10, 0, 10, 0));
         panelBotones.add(botonCalcular);
@@ -43,16 +40,14 @@ public class VentanaPrincipal extends JFrame {
 
         add(panelBotones, BorderLayout.SOUTH);
 
-        // Panel de entradas y resultados
         JPanel panelEntradas = new JPanel();
         panelEntradas.setLayout(new BorderLayout(10, 10));
         panelEntradas.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        // Panel para las etiquetas y campos de texto
         JPanel panelEtiquetas = new JPanel(new GridLayout(2, 1, 10, 10));
         JPanel panelCampos = new JPanel(new GridLayout(2, 1, 10, 10));
 
-        // Etiquetas y campos de texto
+        //Etiquetas y campos de texto
         JLabel etiquetaLenguaje = new JLabel("Lenguaje:");
         campoLenguaje = new JTextField();
         campoLenguaje.setHorizontalAlignment(JTextField.CENTER);
@@ -68,7 +63,6 @@ public class VentanaPrincipal extends JFrame {
         panelCampos.add(campoLenguaje);
         panelCampos.add(campoPotencia);
 
-        // Añadir los paneles de etiquetas y campos al panel de entradas
         panelEntradas.add(panelEtiquetas, BorderLayout.WEST);
         panelEntradas.add(panelCampos, BorderLayout.CENTER);
 
